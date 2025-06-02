@@ -1,0 +1,121 @@
+    /* Dynamic Gradient Background */
+    body {
+        background: linear-gradient(135deg,#003cff,#398fff, #ffdd00, #ff9c23,#ff2f00);
+        background-size: 400% 400%;
+        animation: gradientBG 10s ease infinite;
+}
+
+.dark-mode {
+    background: linear-gradient(135deg,#122745ba, #060b12, #000000,rgba(0, 0, 0, 0.842));
+        background-size: 400% 400%;
+        animation: gradientBG  10s ease infinite;
+}
+    .container {
+display: flex;
+justify-content: center;
+align-items: center; 
+height: 100vh; /* Full viewport height */
+}
+
+
+    @keyframes gradientBG {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }  
+        100% { background-position: 0% 50%; }
+    }
+
+    /* Custom Cursor with Trail */
+    .cursor {
+        position: fixed;
+        width: 10px;
+        height: 10px;
+        background: rgba(255, 255, 255, 0.8);
+        border-radius: 50%;
+        pointer-events: none;
+        transform: translate(-50%, -50%);
+        mix-blend-mode: difference;
+        z-index: 1000;
+    }
+
+    .cursor-trail {
+        position: fixed;
+        width: 40px;
+        height: 40px;
+        border: 2px solid rgb(255, 255, 255);
+        border-radius: 50%;
+        pointer-events: none;
+        transform: translate(-50%, -50%);
+        mix-blend-mode: difference;
+        z-index: 999;
+        transition: all 0.1s ease-out;
+    }
+
+    /* Hover Effects */
+    .hover-effect:hover {
+        transform: scale(1.08);
+        transition: transform 0.4s ease;
+    }
+
+    /* Loading Animation */
+    @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
+
+    .loading {
+        width: 30px;
+        height: 30px;
+        border: 4px solid #fff;
+        border-top: 4px solid transparent;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+    }
+
+    /* Background Images Styling */
+#particles-js {
+position: fixed;
+width: 100%;
+height: 100%;
+z-index: -1;
+overflow: hidden;
+}
+
+#particles-js img {
+position: absolute;
+opacity: 0.3;
+width: 230px;
+animation: float 5s infinite alternate ease-in-out;
+}
+
+#particles-js {
+position: fixed;
+width: 100%;
+height: 100%;
+z-index: -1;
+overflow: hidden;
+}
+
+#particles-js img {
+position: absolute;
+opacity: 0.3;
+width: 200px;
+filter: drop-shadow(20px 20px 40px rgba(0, 0, 0, 0.5));
+animation: float 6s infinite alternate ease-in-out;
+}
+
+/* Positioning Images Randomly */
+.cloud { top: 30%; left: 25%; animation-delay: 0s; }
+.storm { top: 40%; right: 5%; animation-delay: 1s; }
+.thunder { bottom: 70%; left: 5%; animation-delay: 2s; }
+.air { bottom: 5%; right: 50%; animation-delay: 3.5s; }
+.storms { bottom: 40%; right: 30%; animation-delay: 4s; }
+.hot { bottom: 5%; right: 25%; animation-delay: 4.5s; }
+.sun { bottom: 70%; right: 10%; animation-delay: 6s; }
+.cmoon { bottom: 7%; left: 10%; animation-delay: 6.5s; }
+.umbrella { bottom: 75%; right: 50%; animation-delay: 7s; }
+
+/* Floating Animation */
+@keyframes float {
+0% { transform: translateY(0px); }
+100% { transform: translateY(20px); }
+}
